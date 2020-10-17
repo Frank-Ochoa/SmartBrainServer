@@ -23,6 +23,8 @@ const app = express()
 app.use(express.json());
 app.use(cors())
 
+app.get('/', (req, res) => res.json("It's working!"))
+
 // Post to not transfer data
 app.post('/signin', handleSignIn(db, bcrypt))
 
