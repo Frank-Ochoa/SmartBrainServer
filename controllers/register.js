@@ -39,7 +39,6 @@ const handleRegister = (db, bcrypt) => (req, res) =>
 			.catch(trx.rollback)
 	})
 		.catch(err => {
-			console.log(err)
 			res.status(400).json('Unable To Register User Second')
 		})
 

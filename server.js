@@ -8,6 +8,7 @@ import handleProfile from "./controllers/profile.js";
 import {handleAPICall, handleImageEntries} from "./controllers/image.js";
 
 const PORT = process.env.PORT;
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 const db = knex({
 	client: 'pg',
